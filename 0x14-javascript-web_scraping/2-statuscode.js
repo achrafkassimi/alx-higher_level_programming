@@ -4,7 +4,9 @@ const request = require('request');
 // Import the 'request' module.
 
 // Use the 'request' module to perform an HTTP GET request to the URL.
-request.get(process.argv[2]).on('response', function (response) {
+request.get(process.argv[2])
+
+    .on('response', function (response) {
     // Set up an event listener for the 'response' event emitted by the HTTP request.
 
     console.log(`code: ${response.statusCode}`);
